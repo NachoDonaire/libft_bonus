@@ -14,7 +14,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
+/*
 int main()
 {
 	//int i;
@@ -34,5 +34,5 @@ int main()
 	return (0);
 }
 	
-
+*/
 

@@ -1,15 +1,19 @@
 #include "libft.h"
-
-t_list   *ft_lstlast(t_list *lst)
+/*
+void	*del(t_list *lst)
 {
 	if (lst)
-	{
-		while (lst->next)
-			lst = lst->next;
-	}
-	return (lst);
-}
+		free(lst);
+}*/
 
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
+}
 /*
 int main()
 {
@@ -33,5 +37,5 @@ int main()
 
 
 	return (0);
-}
-*/
+}*/
+
